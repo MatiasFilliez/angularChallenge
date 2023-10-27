@@ -1,0 +1,82 @@
+.closed-navBar {
+    width: 3vw;
+    border: 1px solid rgb(65, 108, 187);
+    height: 100vh;
+    border-radius: 0px 8px 8px 0px;
+    animation-name: startDash;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    .arrowElement{
+      float: left;
+      margin-top: 1rem;
+      width: 2vw;
+      height: auto;
+      height: auto;
+      align-items: flex-end;
+      animation-name: closedArrow;
+      animation-duration: 0.8s;
+      animation-timing-function: ease;
+    }
+}
+
+.opened-navBar{
+    width: 10vw;
+    border: 1px solid rgb(65, 108, 187);
+    height: 100vh;
+    border-radius: 0px 8px 8px 0px;
+    animation-name: endDash;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    .arrowElement{
+        float: right;
+      margin-top: 1rem;
+      width: 2vw;
+      height: auto;
+      height: auto;
+      align-items: flex-end;
+      animation-name: openedArrow;
+      animation-duration: 0.8s;
+      animation-timing-function: ease;
+    }
+}
+
+*{
+    background-color: rgb(65, 108, 187)
+}
+
+@keyframes startDash {
+    0% {
+        width: 10vw;
+      }
+      100%{
+        width: 3vw;
+      }
+  }
+
+  @keyframes endDash {
+    0% {
+        width: 3vw;
+      }
+      100%{
+        width: 10vw;
+      }
+      
+  }
+
+  @keyframes closedArrow {
+    0%{
+      transform: translateX(-500%) ;
+    }
+    100%{
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes openedArrow {
+    0%{
+      transform: translatey(-350%) ;
+    }
+    100%{
+      transform: translatey(0%);
+    }
+  }

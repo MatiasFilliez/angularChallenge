@@ -1,0 +1,41 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(150px, 1fr),
+        
+
+    );
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 80vh;
+    width: 80vw;
+    margin-top: 5%;
+    animation-name: inicio;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    align-items: center;
+    box-shadow: 0px 0px 20px #000;
+}
+
+.menuTitle{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mainContainer{
+    display: flex;
+}
+
+
+@keyframes inicio {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .gridButton{
+    gap: 500px
+  }
