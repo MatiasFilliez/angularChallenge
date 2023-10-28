@@ -1,4 +1,6 @@
 .closed-navBar {
+/*   background: linear-gradient(to bottom right,rgb(65, 108, 187),white); */
+background-color: rgb(65, 108, 187);
     width: 3vw;
     border: 1px solid rgb(65, 108, 187);
     height: 100vh;
@@ -8,11 +10,6 @@
     animation-timing-function: ease;
     .arrowElement{
       float: left;
-      margin-top: 1rem;
-      width: 2vw;
-      height: auto;
-      height: auto;
-      align-items: flex-end;
       animation-name: closedArrow;
       animation-duration: 0.8s;
       animation-timing-function: ease;
@@ -20,20 +17,18 @@
 }
 
 .opened-navBar{
+ /*  background: linear-gradient(to bottom right,rgb(65, 108, 187),white); */
+ background-color: rgb(65, 108, 187);
+  justify-content: center;
     width: 10vw;
-    border: 1px solid rgb(65, 108, 187);
+    border: 1px solid black;
     height: 100vh;
     border-radius: 0px 8px 8px 0px;
     animation-name: endDash;
     animation-duration: 0.8s;
     animation-timing-function: ease;
     .arrowElement{
-        float: right;
-      margin-top: 1rem;
-      width: 2vw;
-      height: auto;
-      height: auto;
-      align-items: flex-end;
+      float: right;
       animation-name: openedArrow;
       animation-duration: 0.8s;
       animation-timing-function: ease;
@@ -41,8 +36,20 @@
 }
 
 *{
-    background-color: rgb(65, 108, 187)
+    /* background-color: rgb(65, 108, 187) */
+    
 }
+
+.arrowElement{
+  margin-top: 1rem;
+  width: 2vw;
+  height: auto;
+}
+
+.arrowElement:hover{
+  cursor: pointer;
+}
+
 
 @keyframes startDash {
     0% {
@@ -79,4 +86,20 @@
     100%{
       transform: translatey(0%);
     }
+  }
+
+  .profileClass{
+    max-width: 9vw;
+    float: right;
+    border-radius: 50%;
+    animation-name: openedArrow;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+  }
+
+  .profileName{
+    animation-name: closedArrow;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   }

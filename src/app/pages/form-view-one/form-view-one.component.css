@@ -1,0 +1,94 @@
+.container{
+  display: flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 80vh;
+    width: 80vw;
+    margin-top: 5%;
+    animation-name: openedArrow;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    box-shadow: 0px 0px 20px #000;
+    align-items: center;
+    justify-content: center;
+/*     background: linear-gradient(to bottom right, white,grey); */
+
+}
+.formOne{
+ /*  background-color:  rgb(65, 108, 187); */
+  min-width: 40vw;
+  min-height: 70vh;
+  border-radius: 8px;
+  padding: 5px 10px 5px 10px;
+ /*  min-height: 60hw; */
+ /* margin-left: 20%;
+ margin-top: 5%; */
+
+}
+.menuTitle{
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding:5px 20px 5px 20px;
+}
+
+
+@keyframes inicio {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .gridButton{
+    gap: 500px
+  }
+
+  @keyframes openedArrow {
+    0%{
+      transform: translatey(-80%) ;
+    }
+    100%{
+      transform: translatey(0%);
+    }
+  }
+
+  .formularioClass{
+    background-color: white;
+    width: 40vw;
+    height: 60vh;
+    border-radius: 8px;
+    box-shadow: 0px 0px 30px #000;
+     display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr),
+    );
+  }
+
+  .form-group{
+    justify-content: center;
+  }
+
+  .alertValidation{
+    position: absolute;
+/*     z-index: 1; */
+  /*   border: 1px solid black;
+    border-radius: 8px; */
+    border-radius: 8px;
+    padding: 2px 5px 2px 5px;
+    justify-content: center;
+    background-color: white;
+    text-decoration: underline;
+    color: red;
+  }
+
+  .menuTitle{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+*{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}

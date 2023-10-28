@@ -1,0 +1,69 @@
+ <div class="container offset-2">
+     
+     
+     <form [formGroup]='formUser' class="formOne">
+     <br>   
+     <br>   
+     <br>   
+     <div class="row mt-3">
+
+         <div class="form-group col-sm-3 offset-3 mt-3">
+             <label for="name" class="form-label">Nombre</label>
+                <input formControlName="name" class="form-control mb-2" id="name" type="text">
+                <div class="alert alert-danger" [hidden]="name.valid || name.pristine">El nombre es requerido</div>
+            </div>
+            <div class="form-group col-sm-3 mt-3 ">
+                <label for="name" class="form-label">Apellido</label>
+                <input formControlName="lastName"  class="form-control mb-2" id="name" type="text">
+                <div class="alert alert-danger" [hidden]="lastName.valid || lastName.pristine">El apellido es requerido</div>
+            </div>
+            <div class="form-group col-sm-3 offset-3 mt-3">
+                <label for="phoneNumber" class="form-label">Telefono</label>
+                <input formControlName="phoneNumber"  class=" form-control" name="phoneNumber" id="phoneNumber" type="text" mask="(XXX) XXXX-XXXX" >
+                <div class="alert alert-danger" [hidden]="phoneNumber.valid || phoneNumber.pristine">Ingrese un telefono valido</div>
+            </div>
+            
+            <div class="form-group col-sm-3 mt-3">
+                <label for="documentNumber" class="form-label">Documento</label>
+                <input formControlName='documentNumber' class="form-control" name="documentNumber" id="documentNumber" type="text" mask="00.000.000" >
+                <div class="alert alert-danger" [hidden]="documentNumber.valid || documentNumber.pristine">Ingrese un documento valido</div>
+            </div>
+            <div class="form-group col-sm-6 offset-3 mt-3">
+                <label for="email" class="form-label">Email</label>
+                <input formControlName='email' class="form-control" name="email" id="email" type="text" >
+                <div class="alert alert-danger" [hidden]="email.valid || email.pristine">Ingrese un email valido</div>
+            </div>
+            
+            <div class="offset-3 mt-3 ">
+                <br><br>   
+                <button type="button" class="btn btn-outline-primary col-sm-2 offset-1" [disabled]="formUser.invalid" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Enviar</button>
+                <button type="button" class="btn btn-outline-danger col-sm-2" routerLink="">Cancelar</button>
+            </div>
+        </div>
+        </form>
+ 
+    </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 offset-3" id="staticBackdropLabel">Comprobación de datos</h1>
+
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body offset-3">
+              <p>Nombre: {{formUser.get('name')?.value}}</p>
+              <p>Apellido: {{formUser.get('lastName')?.value}}</p>
+              <p>Telefono: {{formUser.get('phoneNumber')?.value}}</p>
+              <p>Documento: {{formUser.get('documentNumber')?.value}}</p>
+              <p>Email: {{formUser.get('email')?.value}}</p>
+
+            </div>
+            <div class="offset-3 mb-3">
+              <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" (click)="test()">Aceptar</button>
+              <button type="button" class="btn btn-outline-danger offset-2"  data-bs-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
